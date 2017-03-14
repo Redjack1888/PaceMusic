@@ -35,8 +35,11 @@ public class MainActivity extends AppCompatActivity {
         mail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mailIntent = new Intent(Intent.ACTION_SENDTO);
-                mailIntent.setData(Uri.parse("pace-music@libero.it"));
+                Intent mailIntent = new Intent(Intent.ACTION_SEND);
+                mailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {"pace-music@libero.it"});
+                mailIntent.putExtra(Intent.EXTRA_SUBJECT, "");
+                mailIntent.putExtra(Intent.EXTRA_TEXT, "");
+                mailIntent.setType("message/rfc822");
                 if (mailIntent.resolveActivity(getPackageManager()) != null) {
                     startActivity(mailIntent);
                 }
