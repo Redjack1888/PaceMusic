@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/activity_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+
+            <ImageView
+                android:id="@+id/pace_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/shop_view"
+                android:scaleType="fitStart"
+                android:src="@drawable/pacemusic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="@string/shop_name"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="36sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/title"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/pace_image"
+                android:padding="8dp"
+                android:text="@string/title" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView"
+                android:layout_toEndOf="@+id/pacelogo"
+                android:layout_toRightOf="@+id/pacelogo"
+                android:paddingBottom="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/about"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:id="@+id/indirizzo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView2"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="32dp"
+                android:gravity="center_vertical"
+                android:paddingTop="8dp">
+
+                <ImageView
+                    android:id="@+id/location"
+                    style="@style/icons"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/location_icon"
+                    android:src="@drawable/ic_location_on" />
+
+                <Button
+                    android:id="@+id/address"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:text="@string/shop"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/indirizzo"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="32dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/phone"
+                    style="@style/icons"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/phone_icon"
+                    android:src="@drawable/ic_local_phone" />
+
+                <Button
+                    android:id="@+id/phonenumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:text="@string/phonenumber" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/telefono"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="32dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/time"
+                    style="@style/icons"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/mail_icon"
+                    android:src="@drawable/ic_mail" />
+
+                <Button
+                    android:id="@+id/mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:text="@string/mailaddress"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/orari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/web"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/clock"
+                    style="@style/icons"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/schedule_icon"
+                    android:src="@drawable/ic_access_time" />
+
+                <TextView
+                    android:id="@+id/days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:paddingTop="8dp"
+                    android:text="@string/schedule_days"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hours"
+                    style="@style/text"
+                    android:layout_height="match_parent"
+                    android:paddingEnd="0dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="0dp"
+                    android:paddingStart="20dp"
+                    android:text="@string/schedule_times"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/pacelogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/shop_logo"
+                android:padding="16dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/pacemusiclogo"
+                android:layout_above="@+id/indirizzo" />
+
+            <LinearLayout
+                android:id="@+id/web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/email"
+                android:layout_alignStart="@+id/email"
+                android:layout_below="@+id/email"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/webpage"
+                    style="@style/icons"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/website_icon"
+                    android:src="@drawable/ic_language" />
+
+                <Button
+                    android:id="@+id/weburl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:text="@string/weburl"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+</ScrollView>
+
