@@ -16,26 +16,25 @@
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:textColor">@color/title</item>
         <item name="android:textStyle">bold|italic</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textSize">@dimen/title</item>
+        <item name="android:textSize">@dimen/subtitle</item>
     </style>
 
     <style name="text">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingTop">@dimen/m_p_8</item>
         <item name="android:textColor">@color/text</item>
         <item name="android:textSize">@dimen/text</item>
-        <item name="android:textAlignment">gravity</item>
     </style>
 
     <style name="icons">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingBottom">4dp</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">8dp</item>
-        <item name="android:paddingTop">4dp</item>
-        <item name="android:scaleType">centerCrop</item>
+        <item name="android:paddingBottom">@dimen/m_p_4</item>
+        <item name="android:paddingLeft">@dimen/m_p_8</item>
+        <item name="android:paddingRight">@dimen/m_p_8</item>
+        <item name="android:paddingTop">@dimen/m_p_4</item>
+        <item name="android:scaleType">fitCenter</item>
+
     </style>
 </resources>
