@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+
+        <ImageView
+            android:id="@+id/pace_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/shop_view"
+            android:scaleType="fitStart"
+            android:src="@drawable/pacemusic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/shop_name"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/pace_image"
+            android:padding="@dimen/m_p_8"
+            android:text="@string/title"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/pacelogo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/shop_logo"
+                android:padding="@dimen/m_p_16"
+                android:scaleType="fitCenter"
+                android:src="@drawable/pacemusiclogo" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingBottom="0dp"
+                android:paddingLeft="@dimen/m_p_8"
+                android:paddingRight="@dimen/m_p_8"
+                android:text="@string/about"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_p_1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/about"
+            android:layout_marginLeft="@dimen/m_p_16"
+            android:layout_marginRight="@dimen/m_p_16"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/indirizzo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_p_16"
+                android:layout_marginLeft="@dimen/m_p_32"
+                android:layout_marginRight="@dimen/m_p_16"
+                android:layout_marginStart="@dimen/m_p_32"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/m_p_2"
+                android:paddingTop="@dimen/m_p_4"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/location"
+                    style="@style/icons"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/location_icon"
+                    android:src="@drawable/ic_location_on" />
+
+                <Button
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="start"
+                    android:paddingTop="@dimen/m_p_8"
+                    android:text="@string/shop"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_p_16"
+                android:layout_marginLeft="@dimen/m_p_32"
+                android:layout_marginRight="@dimen/m_p_16"
+                android:layout_marginStart="@dimen/m_p_32"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/m_p_2"
+                android:paddingTop="@dimen/m_p_2"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/phone"
+                    style="@style/icons"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/phone_icon"
+                    android:src="@drawable/ic_local_phone" />
+
+                <Button
+                    android:id="@+id/phonenumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@android:color/white"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/phonenumber"
+                    android:textAlignment="gravity"
+                    android:textSize="@dimen/text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/orari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/m_p_16"
+                android:layout_marginEnd="@dimen/m_p_16"
+                android:layout_marginLeft="@dimen/m_p_32"
+                android:layout_marginRight="@dimen/m_p_16"
+                android:layout_marginStart="@dimen/m_p_32"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/m_p_2"
+                android:paddingTop="@dimen/m_p_2">
+
+                <ImageView
+                    android:id="@+id/clock"
+                    style="@style/icons"
+                    android:layout_height="@dimen/m_p_50"
+                    android:contentDescription="@string/schedule_icon"
+                    android:src="@drawable/ic_access_time" />
+
+                <TextView
+                    android:id="@+id/days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:paddingTop="@dimen/m_p_8"
+                    android:text="@string/schedule_days"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hours"
+                    style="@style/text"
+                    android:layout_height="match_parent"
+                    android:paddingEnd="0dp"
+                    android:paddingLeft="@dimen/m_p_20"
+                    android:paddingRight="0dp"
+                    android:paddingStart="@dimen/m_p_20"
+                    android:text="@string/schedule_times"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_p_16"
+                android:layout_marginLeft="@dimen/m_p_32"
+                android:layout_marginRight="@dimen/m_p_16"
+                android:layout_marginStart="@dimen/m_p_32"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/m_p_2"
+                android:paddingTop="@dimen/m_p_2"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/webpage"
+                    style="@style/icons"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/website_icon"
+                    android:src="@drawable/ic_language" />
+
+                <Button
+                    android:id="@+id/weburl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@android:color/white"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/weburl"
+                    android:textAlignment="gravity"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_p_16"
+                android:layout_marginLeft="@dimen/m_p_32"
+                android:layout_marginRight="@dimen/m_p_16"
+                android:layout_marginStart="@dimen/m_p_32"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/m_p_4"
+                android:paddingTop="@dimen/m_p_2"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/time"
+                    style="@style/icons"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/mail_icon"
+                    android:src="@drawable/ic_mail" />
+
+                <Button
+                    android:id="@+id/mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@android:color/white"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/mailaddress"
+                    android:textAlignment="gravity"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text" />
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
+
